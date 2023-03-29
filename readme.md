@@ -40,19 +40,19 @@ is_valid() - To confirm if a given number from 1-9 is a valid option for a parti
 
 find_empty() - To find the entry in the still not in used/ empty. Return the reference location in parameter of row, col of the empty cell. In case it finds no empty cell, this is an indication that our puzzle/board is fully occupied and solved. Return a None value.
 
-backtracking() - :
+backtracking() - Steps as follow:
 
 1. look for empty cell. If none is found, then puzzled solved.
 2. If there's an empty cell, apply a number from 1-9 to that empty cell and examine if it's within our define constraints, a valid solution.
 3. If the number is valid, call the backtracking() recursively and go back to step 1 to look for next empty cell.
 4. If none of the number is valid, previous call of the function will reset the value of the cell to 0 and look for next valid number.
 
-sudoku_solver() - Check if the initial state of the board is valid (satisfy 'no duplication' condition). If true, perform the backtracking and solve the puzzle. If puzzle is invalid or no solution. call invalid_initial(), puzzle/board returns 9x9 array of "-1".
+sudoku_solver() - Check if the initial state of the board is valid (satisfy 'no duplication' condition). If true, perform the backtracking and solve the puzzle. If puzzle is invalid or no solution, call invalid_initial(), puzzle/board returns 9x9 array of "-1".
 
 ## Results and Improvements
 
 This is a simple backtracking approach with minimum constraints condition. The results turn out to be very effective on test cases from very easy to medium with less than 0.1 second. However, almost half of the test cases in hard took more than 20 secs to solve the puzzle. This can be further improved with more Constraint Propagation such as Single-value approach, elimination and naked twins. In conclusion, this is a fun and interesting assignments and a very good start learning the algorithm.
 
-## Reference:
+## Reference
 
-Chaturvedi, A., 2021. Backtracking | Introduction - GeeksforGeeks. [online] GeeksforGeeks. Available from: [https://www.geeksforgeeks.org/backtracking-introduction/](https://www.geeksforgeeks.org/backtracking-introduction/) [Accessed 20 Mar. 2022].
+Chaturvedi, A., 2021. Backtracking | Introduction - GeeksforGeeks. [online] GeeksforGeeks. Available from: {[https://www.geeksforgeeks.org/backtracking-introduction/](https://www.geeksforgeeks.org/backtracking-introduction/)} [Accessed 20 Mar. 2022].
